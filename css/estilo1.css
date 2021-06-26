@@ -1,0 +1,262 @@
+/* margen 0 y padding 0 a nivel global */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fff; /* color de fondo de body*/
+}
+
+/* parte superior de la pagina, la cual tiene un degradado */
+header{
+    width: 100%;
+    height: 600px; /* tiene 600px hacia abajo */
+    background: #12c2e9;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #f64f59, #c471ed, #12c2e9);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #f64f59, #c471ed, #12c2e9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative; /* footer */
+}
+
+/* barra de navegacion */
+ul.clase1{
+    list-style-type: none; /* quita el estilo de listas */
+    padding: 30px 50px 0 0; 
+    overflow: hidden; /* El contenido es recortado y no se muestran barras de posición */
+    position: absolute; /* para ubicar la barra de navegacion en la parte superior */
+    top: 0;
+    text-align: right; 
+    width: 100%; /* abarca un 100& del ancho de la pantalla */
+}
+li{
+    float: right; /* posiciona a la derecha la lista */
+}
+.formulario:hover{
+    background-color: rgba(0, 0, 0, 0.3); /* cuando pasamos el muose sobre los elementos de la lista se opacan */
+}
+
+li a{
+    display: block;  /* posiciona a la derecha la lista */
+    color: rgb(0, 0, 0);
+    text-align: center;  /* alinea en el centro */
+    padding: 14px;
+    text-decoration: none; /* quita la linea de los enlaces */
+}
+/* logo es la parte izquierda */
+img{
+    float: left;
+}
+main .sobre-nosotros{
+    padding: 30px 0 60px 0;
+}
+/* para hacer el efecto de ola */
+.wave{
+    position: absolute;
+    bottom: 0; /* sin espacio en la parte inferior */
+    width: 100%; /* abarca 100% de ancho */
+}
+/* los textos que estan en el header */
+header .textos-header{
+    display: flex; /* para que se comporte como un elemento en bloques */
+    height: 430px;
+    width: 100%;
+    align-items: center; 
+    justify-content: center;
+    flex-direction: column; /* para que los elementos dentro del bloque se comporten como columnas */
+    text-align: center;
+}
+
+/* diferentes tamaños de los titulos dentro del header */
+.textos-header h1{
+    font-size: 50px;
+    color: #fff;
+}
+.textos-header h2{
+    font-size: 30px;
+    font-weight: 300;
+    color: #fff;
+}
+
+
+.titulo{
+    color: blueviolet;
+    font-size: 30px;
+    text-align: center;/* coloca en el centro */
+    margin-bottom: 60px; /* ldeja un espacio de 60px en la parte inferior */
+}
+main .sobre-nosotros{
+    padding: 30px 0 60px 0;
+}
+
+.contenedor-sobre-nosotros{
+    display: flex;
+    justify-content: space-evenly; 
+}
+
+.imagen-about-us{
+    width: 48%; /* esto hace que las imagenes abarquen un 48% del ancho de la pagina, el otro 48% se utiliza para el texto */
+}
+
+.sobre-nosotros .contenido-textos{
+    width: 48%; /* el texto abarca 48% del espacio en pantalla */
+}
+
+.contenido-textos h3{
+    margin-bottom: 15px; /* deja un margen de 15px en la parte inferior */
+}
+/* titulos enumerados, por ejemplo vision y mision */
+.contenido-textos h3 span{
+    background-color: blueviolet;
+    color: white;
+    border-radius: 50%; /* para que sea redondo*/
+    display: inline-block; /* muestra los elementos con respecto a los bloques, esto evita que el circulo se vea ovalado */
+    text-align: center; /*para que este en el centro*/
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.5); /* coloca una sombra a los elementos redondos que rodena los numeros */
+}
+
+.contenido-textos p{
+    padding: 0px 0px 30px 15px;
+    font-weight: 300;
+    text-align: justify; /* esto hace que el texto abarque la mayor cantidad de anchura, haciendo que se vea simetrico */
+}
+
+.portafolio{
+    background: #f2f2f2;
+}
+
+.galeria-port{
+    display: flex;
+    justify-content: space-evenly; /* hace que el espacio sea igual*/
+    flex-wrap: wrap; /* hace que los elementos que abarque, tomen una forma de cuadricula, ordenandolos*/
+}
+
+.imagen-port{
+    width: 24%; /* para que se pueddan ver 4 imagenes a lo ancho*/
+    margin-bottom: 10px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer; /* esto hace que cuando el cursor se pase por encima, se coloque el apuntador en vez del cursor*/
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5); /*agrega una sombra*/
+}
+
+.imagen-port > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* hace que las imagenes se acoplen y se vean simetricas en tamaño con respecto a las demas */
+    display: block; /* se muestran en bloques */
+}
+/* este codigo se usa para la animacion e la galeria */
+.hover-galeria{
+    /* coloca el texto y logo dentro de la simagenes de la galeria*/
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    transform: scale(0); /* es para que no se muestre el elemto morado y transparente*/
+    background: hsla(273,91%,27%, 0.7);
+    transition: transform .5s; /* el tiempo de la animacion */
+    display: flex; 
+    justify-content: center; /* hace que el elemento este colocado en el centro*/
+    align-items: center; /* alininea los elementos en el centro*/
+    flex-direction: column; /* hace que los elementos se comporten como columnas*/
+}
+
+.hover-galeria img{
+    width: 50px;
+}
+
+.hover-galeria p{
+    color: #fff; /* hace que las letras sean blancas*/
+}
+
+.imagen-port:hover .hover-galeria{
+    transform: scale(1); /* cuando se pasa el mouse sobre las imagenes se activa la animacion*/
+}
+
+/* footer */
+
+footer{
+    background: #414141;
+    padding: 60px 0 30px 0; /* para posicionar los textos */
+    margin: auto; /* agrega margen automatico, para cemtrar todo*/
+    overflow: hidden;
+}
+
+.contenedor-footer{
+    display: flex; /* muestra el contenido en bloques*/
+    width: 90%;
+    justify-content: space-evenly; /* para repartir los elementos equitativamente */
+    margin: auto;
+    padding-bottom: 50px; /* agrega un espacio en la parte de abajo */
+    border-bottom: 1px solid #ccc;
+}
+
+.content-foo{
+    text-align: center; /* centra el contenido */
+}
+.content-foo a{
+    /* agrega un color blanco y le quita la decoracion */
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+}
+
+.content-foo h4{
+    color: #fff;
+    border-bottom: 3px solid #af20d3;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.content-foo p{
+    color: #ccc;
+}
+
+
+/* Clients */
+
+.cards{
+    /* divide los elementos equitativamente */
+    display: flex;
+    justify-content: space-evenly; 
+}
+
+.cards .card{
+    background: #4d0686;
+    /* los elementos se alinean verticalmente y horizontalmente divide el espacio entre ellos */
+    display: flex;
+    width: 46%; /* abarca 46% de anchura */
+    height: 200px; /* abarca 200 px de alatura */
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 5px; /* redondea un poco las esquinas */
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.6); /* agrega una box shadown*/
+}
+
+.cards .card img{
+    /* cambia el tamaño de la imagen */
+    width: 100px;
+    height: 100px;
+    object-fit: cover; /* hace que cubra los espacios en blanco */
+    border: 3px solid #fff;
+    border-radius: 50%; /* hace que las imagenes sean redondas */
+    display: block;
+}
+
+.cards .card > .contenido-texto-card{
+    /* para ajustar el tamaño y cambiar las letras a blanco */
+    width: 60%;
+    color: #fff;
+}
+
+.cards .card > .contenido-texto-card p{
+    /* reduce ligeramente el tamaño del texto y se le agrega un padding */
+    font-weight: 300;
+    padding-top: 5px;
+}
