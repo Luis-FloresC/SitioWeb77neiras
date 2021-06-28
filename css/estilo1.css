@@ -137,7 +137,7 @@ main .sobre-nosotros{
 }
 
 .imagen-port{
-    width: 24%; /* para que se pueddan ver 4 imagenes a lo ancho*/
+    width: 25%; /* para que se pueddan ver 4 imagenes a lo ancho*/
     margin-bottom: 10px;
     overflow: hidden;
     position: relative;
